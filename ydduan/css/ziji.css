@@ -1,0 +1,26 @@
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+ul { list-style: none; }
+
+body { padding-top: 80px; padding-bottom: 60px; }
+
+a { text-decoration: none; -webkit-tap-highlight-color: transparent; }
+
+header { width: 100%; height: 80px; background: rgba(200, 130, 240, 0.8); text-align: center; line-height: 80px; font-size: 30px; position: fixed; top: 0; }
+
+section { width: 100%; height: 100%; box-sizing: border-box; }
+section .lbt { width: 100%; height: 200px; overflow: hidden; position: relative; }
+section .lbt .lbt_ul { width: 200%; height: 100%; }
+section .lbt .lbt_ul li { width: 50%; height: 100%; float: left; }
+section .lbt .lbt_ul li img { width: 100%; height: 100%; }
+section .lbt .lbt_dian { width: 60px; position: absolute; bottom: 10px; right: 10px; z-index: 100; }
+section .lbt .lbt_dian .lbt_dian_span { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 2px solid #f40d64; background: #fff; margin-left: 10px; }
+
+footer { height: 60px; width: 100%; background: #777; position: fixed; bottom: 0; }
+
+/*.clearfix::after,
+.clearfix::before{  content:''; height: 0; display: block; line-height:0 ; clear: both;    
+}
+*/
+
+/*# sourceMappingURL=ziji.css.map */
