@@ -120,6 +120,9 @@ footer{
         box-sizing: border-box;
         padding-top: 0.25rem;
         border-right: 0.025rem solid #fff;
+        &:last-child{
+            border: none;
+        }
         i{
             display: block;
             margin: 0 auto;
