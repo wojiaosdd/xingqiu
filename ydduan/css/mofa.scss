@@ -10,14 +10,19 @@ a{
 }
 ul{
     list-style: none;
+    padding: 0;
+}
+body{
+    padding-top: 3rem;
 }
 header {
     width: 16rem;
-    height: 3rem;
+    height:3rem;
     display: -webkit-box;
     padding: 0.5rem;
     box-sizing: border-box;
     line-height: 2.5rem;
+    border-bottom: 1px solid #55A532;
     background: rgba(40,113,57,0.1);
     position: fixed;
     top: 0;
@@ -46,8 +51,34 @@ header {
         }
     }
 }
+nav{
+    width: 16rem;
+    border-bottom: 1px solid #55A532;
+    z-index: 100;
+    ul{
+        display: -webkit-box ;
+        li{
+            -webkit-box-flex: 1;
+            height: 1.4rem;
+            line-height: 1.0rem;
+            text-align: center;
+            border-right:1px solid #55A532 ;
+            background: rgba(40,113,57,0.5);
+            &:last-child{
+                border: none;
+            }
+            
+            a{
+                color: rgba(4,81,29,1);
+                font-size:0.6rem ;
+                font-family:"arial black" ;
+               
+            }
+        }
+    }
+}
 section{
-    padding: 3rem 0 3rem 0;
+   
     ul{
         li{
             i{
