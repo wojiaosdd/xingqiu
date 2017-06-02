@@ -22,9 +22,9 @@ nav ul li a { color: #000; font-size: 0.7rem; }
 
 footer { border-top: 1px solid #888; height: 2.5rem; width: 100%; }
 footer ul { width: 100%; display: -webkit-box; }
-footer ul li { -webkit-box-flex: 1; padding-top: 0.1rem; text-align: center; }
+footer ul li { -webkit-box-flex: 1; padding-top: 0.2rem; text-align: center; }
 footer ul li:nth-child(3) a { position: relative; }
-footer ul li:nth-child(3) a div { position: absolute; width: 2.7rem; height: 2.7rem; border: 0.05rem solid #888; border-radius: 50%; top: -0.3rem; left: -1.2rem; }
+footer ul li:nth-child(3) a div { position: absolute; width: 2.7rem; height: 2.7rem; border: 0.05rem solid #888; border-radius: 50%; top: -0.5rem; left: -1.2rem; }
 footer ul li:nth-child(3) a div p { margin: 0.6rem auto; }
 footer ul li:nth-child(3) a div p i { font-size: 1.4rem; }
 footer ul li a { width: 100%; }

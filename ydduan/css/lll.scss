@@ -89,7 +89,7 @@ footer {
         display: -webkit-box;
         li{
             -webkit-box-flex: 1;
-            padding-top: 0.1rem;
+            padding-top: 0.2rem;
             text-align: center;
             &:nth-child(3){
                     a{
@@ -101,7 +101,7 @@ footer {
                             height:2.7rem;
                             border:0.05rem solid #888;
                             border-radius:50% ;
-                            top: -0.3rem;
+                            top: -0.5rem;
                             left:-1.2rem;
                             p{
                                 margin:0.6rem auto;
