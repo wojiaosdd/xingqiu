@@ -227,6 +227,8 @@ section{
                 float: left;
                 background: #4998E6;
                 color: white;
+                line-height: 0.8rem;
+                text-align: center;
             }
             &.hot {
                 height: 3rem;
@@ -244,6 +246,7 @@ section{
         }
     }
 }
+
 #xinwen{
     display: inline-block;
     width: 15rem;
@@ -265,6 +268,7 @@ section{
             text-align: center;
             i{
                 color: white;
+                font-size:0.8rem ;
             }
         }
     }

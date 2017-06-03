@@ -33,7 +33,7 @@ section .lbt .bottom ul li:nth-child(2) { background: #aaaaaa; }
 section .nei li { padding: 0.5rem 0 0.5rem 0.4rem; height: 2rem; width: 16rem; box-sizing: border-box; position: relative; border-bottom: 0.05rem solid #eee; }
 section .nei li a { font-size: 0.8rem; color: #317ECB; float: left; height: 0.8rem; padding-right: 0.4rem; line-height: 0.8rem; border-right: 0.1rem solid #eee; }
 section .nei li .wenzhang { padding: 0; float: left; width: 11rem; margin-left: 0.5rem; font-size: 0.7rem; color: #000; position: relative; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-section .nei li #tuijian { text-align: center; display: inline-block; width: 2.5rem; height: 1.0rem; line-height: 1.0rem; font-size: 0.5rem; background: red; color: white; border-radius: 0.15rem; position: absolute; top: -0.2rem; right: 3rem; z-index: 1000; }
+section .nei li #tuijian { text-align: center; display: inline-block; width: 2.5rem; height: 1.0rem; line-height: 1.0rem; font-size: 0.6rem; background: red; color: white; border-radius: 0.15rem; position: absolute; top: -0.2rem; right: 3rem; z-index: 1000; }
 
 .smallnav { border-top: 0.1rem solid #4998E6; width: 100%; }
 .smallnav ul { width: 100%; }
@@ -43,7 +43,7 @@ section .nei li #tuijian { text-align: center; display: inline-block; width: 2.5
 .nei2 { margin-top: 2rem; padding: 0.4rem 0 0 0.4rem; }
 .nei2 .nei2_ul li { height: 0.8rem; width: 100%; border-bottom: 0.05rem solid #aaa; padding: 0.5rem 0; }
 .nei2 .nei2_ul li p { float: left; width: 10rem; margin-left: 0.5rem; font-size: 0.7rem; color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.nei2 .nei2_ul li .zhuanti { display: inline-block; width: 1.4rem; height: 0.8rem; border-radius: 5px; font-size: 0.5rem; float: left; background: #4998E6; color: white; }
+.nei2 .nei2_ul li .zhuanti { display: inline-block; width: 1.4rem; height: 0.8rem; border-radius: 5px; font-size: 0.5rem; float: left; background: #4998E6; color: white; line-height: 0.8rem; text-align: center; }
 .nei2 .nei2_ul li.hot { height: 3rem; padding-bottom: 0.4rem; }
 .nei2 .nei2_ul li.hot img { width: 3.75rem; height: 3rem; float: left; }
 .nei2 .nei2_ul li.hot p { color: #888; }
@@ -51,6 +51,6 @@ section .nei li #tuijian { text-align: center; display: inline-block; width: 2.5
 #xinwen { display: inline-block; width: 15rem; height: 1.3rem; margin: 0.5rem auto; text-align: center; line-height: 1.3rem; }
 #xinwen span { color: #888; font-size: 0.8rem; }
 #xinwen span.jiankuohao { display: inline-block; margin-left: 0.25rem; width: 1rem; height: 1rem; border-radius: 50%; background: #888; line-height: 1rem; text-align: center; }
-#xinwen span.jiankuohao i { color: white; }
+#xinwen span.jiankuohao i { color: white; font-size: 0.8rem; }
 
 /*# sourceMappingURL=neirong.css.map */
