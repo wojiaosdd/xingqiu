@@ -81,7 +81,7 @@
 				 if(n==0){
 				 	var num=olen;   //如何是四张图这个num=4
 				 	console.log(num);
-				 	lbt_ul.style.left=-num*liWith+"px";
+				 	lbt_ul.style.left=-num*liWidth+"px";
 				 }
 				 
 				 if(-n==len-1){   //len-1应该是7如果是复制完是8张
@@ -99,7 +99,7 @@
     
     lbt_ul.addEventListener("touchend",function(ev){
     	var n=Math.round(this.offsetleft/liWidth);
-    	lbt_ul.style.left=n*liWith+"px";
+    	lbt_ul.style.left=n*liWidth+"px";
 //  	console.log(this.offsetLeft);
 //  	console.log(lbt_ul.style.left);
     });
