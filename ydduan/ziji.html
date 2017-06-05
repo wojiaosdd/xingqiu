@@ -10,10 +10,9 @@
 </head>
 <body>
 	<header>记 得 打 勾 勾 哦</header>
-	<!--<div class=""></div>-->
 	<section>
-		<div class="lbt">
-			<ul class="lbt_ul">
+		<div class="lbt" id="lbt">
+			<ul class="lbt_ul" id="lbt_ul">
 				<li><img src="img/duanwu1.jpg"/></li>
 				<li><img src="img/duanwu2.jpg"/></li>
 			</ul>
@@ -49,5 +48,62 @@
 </body>
 <script>
 	document.documentElement.style.fontSize=innerWidth/16+"px";
+	var objOne=document.getElementById("lbt");
+	objOne.addEventListener("touchstart",function(ev){
+		ev.preventDefault();
+	});
+	
+	var lbt_ul=document.getElementById("lbt_ul");
+	var lbt_lis=lbt_ul.getElementsByTagName("li");
+	var olen=lbt_lis.length;
+//	console.log(olen);
+	
+	var liWidth = lbt_lis[0].clientWidth;
+	lbt_ul.innerHTML+=lbt_ul.innerHTML;
+	var len=lbt_ul.children.length;
+	lbt_ul.style.width=len*liWidth+"px";
+    var disX;
+    var leftp=0;
+    
+//  var w=lis[0].clientWidth;
+//			list.innerHTML+=list.innerHTML;
+//			var len=list.children.length;
+//			console.log(len);
+//			list.style.width=len*w+"px";
+//			var disx;
+//			var leftp=0;
+    
+	lbt_ul.addEventListener("touchstart",function(ev){
+				 disX=ev.changedTouches[0].pageX;
+				
+				 var n=Math.round(this.offsetLeft/liWidth);
+				 //实现连续的无缝滚动
+				 if(n==0){
+				 	var num=olen;   //如何是四张图这个num=4
+				 	console.log(num);
+				 	lbt_ul.style.left=-num*liWith+"px";
+				 }
+				 
+				 if(-n==len-1){   //len-1应该是7如果是复制完是8张
+				 	
+				 	num=olen-1;   //如果是四张图这个数应该是3
+				 	
+				 	 lbt_ul.style.left=-num*liWidth+"px";
+				 }
+				 
+				  leftp=this.offsetLeft;
+			});
+    lbt_ul.addEventListener("touchmove",function(ev){
+    	lbt_ul.style.left=(ev.changedTouches[0].pageX-disX)+leftp+"px";
+    });
+    
+    lbt_ul.addEventListener("touchend",function(ev){
+    	var n=Math.round(this.offsetleft/liWidth);
+    	lbt_ul.style.left=n*liWith+"px";
+//  	console.log(this.offsetLeft);
+//  	console.log(lbt_ul.style.left);
+    });
+
+
 </script>
 </html>
