@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/ziji.css"/>
+    <title>打勾勾</title>
+    <script>
+    	document.documentElement.style.fontSize=innerWidth/16+"px";
+    </script>
+    
+</head>
+<body>
+	<header>记 得 打 勾 勾 哦</header>
+	<section>
+		<div class="lbt" id="lbt">
+			<ul class="lbt_ul" id="lbt_ul">
+				<li><img src="img/duanwu1.jpg"/></li>
+				<li><img src="img/duanwu2.jpg"/></li>
+			</ul>
+			<div class="lbt_dian">
+				<span class="lbt_dian_span"></span>
+				<span class="lbt_dian_span"></span>
+			</div>
+		</div>
+		<div class="nei">
+			<ul>
+				<li>01</li>
+				<li>02</li>
+				<li>03</li>
+				<li>04</li>
+				<li>05</li>
+				<li>06</li>
+				<li>07</li>
+				<li>08</li>
+				<li>09</li>
+				<li>10</li>
+				<li>11</li>
+				<li>12</li>
+			</ul>
+		</div>
+	</section>
+	<footer>
+	    <ul>
+	    	<li><a href="#">男神</a></li>
+	    	<li><a href="#">WE</a></li>
+	    	<li><a href="#">女神</a></li>
+	    </ul>
+	</footer>
+</body>
+<script>
+
+	var objOne=document.getElementById("lbt");
+	objOne.addEventListener("touchstart",function(ev){
+		ev.preventDefault();
+	});
+	
+	var lbtUl=document.getElementById("lbt_ul");
+	var lbtLis=lbtUl.getElementsByTagName("li");
+	var olen=lbtLis.length;
+//	console.log(olen);
+	
+	var liWidth = lbtLis[0].clientWidth;
+	console.log(liWidth);
+	lbtUl.innerHTML+=lbtUl.innerHTML;
+	var len=lbtUl.children.length;
+	lbtUl.style.width=len*liWidth+"px";
+    var disX;
+    var leftp=0;
+    
+//  var w=lis[0].clientWidth;
+//			list.innerHTML+=list.innerHTML;
+//			var len=list.children.length;
+//			console.log(len);
+//			list.style.width=len*w+"px";
+//			var disx;
+//			var leftp=0;
+    
+	lbtUl.addEventListener("touchstart",function(ev){
+				 disX=ev.changedTouches[0].pageX;
+				 var n=Math.round(this.offsetLeft/liWidth);
+				 //实现连续的无缝滚动
+				 if(n==0){
+				 	var num=olen;   //如何是四张图这个num=4
+				 	
+				 	lbtUl.style.left=-num*liWidth+"px";
+				 }
+				 
+				 if(-n==len-1){   //len-1应该是7如果是复制完是8张
+				 	
+				 	num=olen-1;   //如果是四张图这个数应该是3
+				 	
+				 	 lbtUl.style.left=-num*liWidth+"px";
+				 }
+				 
+				  leftp=this.offsetLeft;
+			});
+			
+    lbtUl.addEventListener("touchmove",function(ev){
+
+    	lbtUl.style.left=(ev.changedTouches[0].pageX - disX)+leftp+"px";
+    });
+    
+    lbtUl.addEventListener("touchend",function(ev){
+    	
+    	var m=Math.round(this.offsetLeft/liWidth);
+    	console.log(m);
+    	lbtUl.style.left=m*liWidth+"px";
+//  	console.log(this.offsetLeft);
+//  	console.log(lbt_ul.style.left);
+    });
+
+
+</script>
+</html>
