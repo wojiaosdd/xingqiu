@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8" />
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>天猫狂欢</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize=innerWidth/16+"px";
+		</script>
+        <style type="text/css">
+        	*{
+        		font-size:0.6rem;
+        		color: red;
+        		margin: 0;
+        		padding: 0;
+        	}
+        	
+        	.sj{
+        		float: left;
+        		width:2.2rem;
+        		height:1rem ;
+        		padding: 0.25rem;
+        		border: 0.05rem solid #FF0000;
+        		border-radius: 5px;
+        		text-align: center;
+        		line-height: 1rem;
+        		background: #888;
+        	}
+        	.zi{
+        		float: left;
+        		width:0.6rem;
+        		height:0.6rem ;
+        		text-align: center;
+        	}
+        	
+        	header{
+        		
+        		height: 3rem;
+        		width: 100%;
+        		background: red;
+        		margin-bottom:1rem ;
+        	}
+        	footer{
+        		height: 3rem;
+        		width: 100%;
+        		background: black;
+        		color: white;
+        		text-align: center;
+        		line-height: 3rem;
+        		position: fixed;
+                bottom: 0;
+        	}
+        	#show{
+        		width: 16rem;
+        		height: 2rem;
+        		line-height: 2rem;
+        		text-align: center;
+        	}
+        </style>
+	</head>
+
+	<body>
+		<header>大家好我是VAE</header>
+		<section id="sec">
+			<div id="show"></div>
+			<div class="sj" id="day"></div><div class="zi">天</div>
+			<div class="sj" id="hour"></div><div class="zi">小时</div>
+			<div id="minute" class="sj"></div><div class="zi">分钟</div>
+			<div class="sj" id="second"></div><div class="zi">秒钟</div>
+		</section>
+		<footer>
+		  这时间管理员可以更改的
+		</footer>
+	</body>
+
+</html>
+<script type="text/javascript">
+	var d = document.getElementById("day");
+	var h = document.getElementById("hour");
+	var m = document.getElementById("minute");
+	var s = document.getElementById("second");
+	var sec = document.getElementById("sec");
+	    function ShowCountDown(year, month, day, divname) {
+		var now = new Date();
+		var endDate = new Date(year, month - 1, day);
+		var leftTime = endDate.getTime() - now.getTime();
+		var leftsecond = parseInt(leftTime / 1000);
+		var leftsecond
+		//var day1=parseInt(leftsecond/(24*60*60*6)); 
+		var day1 = Math.floor(leftsecond / (60 * 60 * 24));
+		var hour = Math.floor((leftsecond - day1 * 24 * 60 * 60) / 3600);
+		var minute = Math.floor((leftsecond - day1 * 24 * 60 * 60 - hour * 3600) / 60);
+		var second = Math.floor(leftsecond - day1 * 24 * 60 * 60 - hour * 3600 - minute * 60);
+		
+		var cc = document.getElementById(divname);
+		d.innerHTML= day1;
+		h.innerHTML= hour;
+		m.innerHTML= minute;
+		s.innerHTML= second
+		cc.innerHTML ="距离" +  year + "年" + month + "月" + day + "日还有：" + day1 + "天" + hour + "小时" + minute + "分" + second + "秒";
+	}
+	window.setInterval(function() {
+		ShowCountDown(2017,6, 8, "show");
+	}, 1000);
+</script>
